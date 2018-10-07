@@ -1391,6 +1391,12 @@
   revision = "160d6fe60303699067faad57dc0b1e147ac499ef"
 
 [[projects]]
+  name = "github.com/yookoala/gofast"
+  packages = ["."]
+  revision = "7de6c1c35ac4ecf187ee53857199fd2ce0507a6c"
+  version = "v0.3"
+
+[[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
   packages = [
@@ -1477,6 +1483,15 @@
   name = "golang.org/x/time"
   packages = ["rate"]
   revision = "8be79e1e0910c292df4e79c241bb7e8f7e725959"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/tools"
+  packages = [
+    "godoc/vfs",
+    "godoc/vfs/httpfs"
+  ]
+  revision = "f60d9635b16a5a57b06eaa119614ba4df421966a"
 
 [[projects]]
   branch = "master"
@@ -1811,6 +1826,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "37e89a543fca153d166cc70fd7fed689f06d894140bf617f69f5f664ffee621e"
+  inputs-digest = "e118a97f8759bd78049c4e30df211ce49993d345ae7e1644d88c8dd79a5bc3c8"
   solver-name = "gps-cdcl"
   solver-version = 1

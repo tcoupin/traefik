@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/containous/traefik/configuration"
+	"github.com/containous/traefik/fastcgi"
 	"github.com/containous/traefik/healthcheck"
 	"github.com/containous/traefik/log"
 	"github.com/containous/traefik/middlewares"
@@ -256,6 +257,8 @@ func createHTTPTransport(globalConfiguration configuration.GlobalConfiguration) 
 			AllowHTTP: true,
 		},
 	})
+
+	transport.RegisterProtocol("fcgi", &fastcgi.Transport{})
 
 	if globalConfiguration.ForwardingTimeouts != nil {
 		transport.ResponseHeaderTimeout = time.Duration(globalConfiguration.ForwardingTimeouts.ResponseHeaderTimeout)
